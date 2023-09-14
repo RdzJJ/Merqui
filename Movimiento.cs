@@ -8,10 +8,10 @@ namespace MerquiV1
 {
     public class Movimiento
     {
-        string CuentaOrigen = "";
-        string CuentaDestino = "";
-        double Valor = 0;
-        string Fecha = "";
+        private string CuentaOrigen = "";
+        private string CuentaDestino = "";
+        private double Valor = 0;
+        private string Fecha = "";
 
         public Movimiento() 
         {

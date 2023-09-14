@@ -9,10 +9,10 @@ namespace MerquiV1
 {
     public class Cuenta
     {
-        string NroCuenta = "";
-        double Saldo = 0;
-        string Titular = "";
-        ArrayList Movimientos;
+        public string NroCuenta = "";
+        private double Saldo = 0;
+        private string Titular = "";
+        private ArrayList Movimientos;
 
         public Cuenta()
         {

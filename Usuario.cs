@@ -8,10 +8,10 @@ namespace MerquiV1
 {
     public class Usuario
     {
-        string Nombre = "";
-        string CédulaCiudadania = "";
-        string NroCuenta = "";
-        string Celular = "";
+        public string Nombre = "";
+        private string CédulaCiudadania = "";
+        public string NroCuenta = "";
+        private string Celular = "";
 
         public Usuario()
         {
