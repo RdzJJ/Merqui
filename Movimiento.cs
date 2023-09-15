@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MerquiV1
+﻿namespace MerquiV1
 {
     public class Movimiento
     {
@@ -13,7 +7,7 @@ namespace MerquiV1
         private double Valor = 0;
         private string Fecha = "";
 
-        public Movimiento() 
+        public Movimiento()
         {
             CuentaOrigen = "";
             CuentaDestino = "";
@@ -26,6 +20,46 @@ namespace MerquiV1
             this.CuentaOrigen = cuentaOrigen;
             this.CuentaDestino = cuentaDestino;
             this.Valor = valor;
+            this.Fecha = fecha;
+        }
+
+        public string getCuentaOrigen()
+        {
+            return CuentaOrigen;
+        }
+
+        public void setCuentaOrigen(string CuentaO)
+        {
+            this.CuentaOrigen = CuentaO;
+        }
+
+        public string getCuentaDestino()
+        {
+            return CuentaDestino;
+        }
+
+        public void getCuentaDestino(string CuentaD)
+        {
+            this.CuentaDestino = CuentaD;
+        }
+
+        public double getValor()
+        {
+            return Valor;
+        }
+
+        public void setValor(double valor)
+        {
+            this.Valor = valor;
+        }
+
+        public string getFecha()
+        {
+            return Fecha;
+        }
+
+        public void setFecha(string fecha)
+        {
             this.Fecha = fecha;
         }
     }

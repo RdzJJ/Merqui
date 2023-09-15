@@ -1,0 +1,14 @@
+C:\Users\JULIAN\source\repos\MerquiV1\bin\Debug\net6.0\MerquiV1.exe
+C:\Users\JULIAN\source\repos\MerquiV1\bin\Debug\net6.0\MerquiV1.deps.json
+C:\Users\JULIAN\source\repos\MerquiV1\bin\Debug\net6.0\MerquiV1.runtimeconfig.json
+C:\Users\JULIAN\source\repos\MerquiV1\bin\Debug\net6.0\MerquiV1.dll
+C:\Users\JULIAN\source\repos\MerquiV1\bin\Debug\net6.0\MerquiV1.pdb
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.AssemblyInfoInputs.cache
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.AssemblyInfo.cs
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.csproj.CoreCompileInputs.cache
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.dll
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\refint\MerquiV1.dll
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.pdb
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\MerquiV1.genruntimeconfig.cache
+C:\Users\JULIAN\source\repos\MerquiV1\obj\Debug\net6.0\ref\MerquiV1.dll

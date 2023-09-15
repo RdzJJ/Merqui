@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace MerquiV1
 {
@@ -12,14 +7,14 @@ namespace MerquiV1
         public string NroCuenta = "";
         private double Saldo = 0;
         private string Titular = "";
-        private ArrayList Movimientos;
+        private List<Movimiento> Movimientos;
 
         public Cuenta()
         {
             NroCuenta = "";
             Saldo = 0;
             Titular = "";
-            Movimientos = new ArrayList();
+            Movimientos = new List<Movimiento>();
         }
 
         public Cuenta(string nroCuenta, double saldo, string titular, ArrayList movimientos)
@@ -27,12 +22,56 @@ namespace MerquiV1
             NroCuenta = nroCuenta;
             Saldo = saldo;
             Titular = titular;
+            Movimientos = new List<Movimiento>();
+        }
+
+        public double getSaldo()
+        {
+            return Saldo;
+        }
+
+        public string getTitular()
+        {
+            return Titular;
+        }
+
+        public void setTitular(string titular)
+        {
+            this.Titular = titular;
+        }
+
+        public List<Movimiento> getMovimientos()
+        {
+            return Movimientos;
+        }
+
+        public void setMovimientos(List<Movimiento> movimientos)
+        {
             Movimientos = movimientos;
         }
 
-        public void Depositar() { }
-        public void Retirar() { }
-        public void Transferir() { }
+        public void Depositar(double valor)
+        {
+            this.Saldo += valor;
+        }
+        public bool Retirar(double valor)
+        {
+            if (this.Saldo >= valor)
+            {
+                this.Saldo -= valor;
+                return true;
+            }
+            return false;
+        }
+        public bool Transferir(double valor, Cuenta cuenta)
+        {
+            if (this.Saldo >= valor)
+            {
+                this.Saldo -= valor;
+                return true;
+            }
+            return false;
+        }
         public void MostrarMovimientos() { }
         public void CerrarSesion() { }
     }
