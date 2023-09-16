@@ -4,6 +4,7 @@
     {
         public string Nombre = "";
         private string CC = "";
+        private string Contrasena = "";
         public string NroCuenta = "";
         private string Celular = "";
 
@@ -11,15 +12,18 @@
         {
             Nombre = "";
             CC = "";
+            contrasena = "";
             NroCuenta = "";
             Celular = "";
         }
 
-        public Usuario(string nombre, string cédulaCiudadania, string nroCuenta, string celular)
+        public Usuario(string nombre, string cédulaCiudadania, string Contrasena, string celular)
         {
+            Random random = new Random();
             this.Nombre = nombre;
             this.CC = cédulaCiudadania;
-            this.NroCuenta = nroCuenta;
+            this.Contrasena = Contrasena;
+            this.NroCuenta = random.Next(0000000000, 999999999).ToString();
             this.Celular = celular;
         }
 
@@ -42,7 +46,15 @@
         {
             this.Celular = celular;
         }
-        public void ActualizarDatos() { }
+        public bool ActualizarDatos(string celular, string contrasena)
+        {
+            if (!this.Celular.Equals(celular) || !this.Contrasena.Equals(contrasena))
+            {
+                this.Celular = celular;
+                return true;
+            }
+            return false;
+        }
         public void CrearCuenta() { }
         public void BorrarCuenta() { }
     }
