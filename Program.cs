@@ -6,7 +6,8 @@
         {
             try
             {
-                Console.WriteLine();
+                Menu menu = new Menu();
+                menu.opciones();
             }
 
             catch (Exception ex)
