@@ -12,7 +12,7 @@
         {
             Nombre = "";
             CC = "";
-            contrasena = "";
+            Contrasena = "";
             NroCuenta = "";
             Celular = "";
         }
@@ -48,14 +48,19 @@
         }
         public bool ActualizarDatos(string celular, string contrasena)
         {
-            if (!this.Celular.Equals(celular) || !this.Contrasena.Equals(contrasena))
+            if (!this.Celular.Equals(celular))
             {
                 this.Celular = celular;
+                return true;
+            }
+            else if (!this.Contrasena.Equals(contrasena))
+            {
+                this.Contrasena = contrasena;
                 return true;
             }
             return false;
         }
         public void CrearCuenta() { }
-        public void BorrarCuenta() { }
+        public void BorrarCuenta() { }  
     }
 }
