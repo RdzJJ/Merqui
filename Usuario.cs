@@ -4,14 +4,17 @@
     {
         public string Nombre = "";
         private string CC = "";
-        private string Contrasena = "";
         public string NroCuenta = "";
+        private string Contrasena = "";
         private string Celular = "";
+        private double saldo = 0;
+        public Cuenta cuenta;
 
         public Usuario()
         {
             Nombre = "";
             CC = "";
+            saldo = 0;
             Contrasena = "";
             NroCuenta = "";
             Celular = "";
@@ -25,6 +28,7 @@
             this.Contrasena = Contrasena;
             this.NroCuenta = random.Next(0000000000, 999999999).ToString();
             this.Celular = celular;
+            this.cuenta = new Cuenta(this.NroCuenta,this.CC,this.Nombre,this.saldo);
         }
 
         public string getCC()

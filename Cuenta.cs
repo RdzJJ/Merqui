@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Numerics;
 
 namespace MerquiV1
 {
@@ -7,21 +8,22 @@ namespace MerquiV1
         public string NroCuenta = "";
         private double Saldo = 0;
         private string Titular = "";
-        private string cc = "";
+        private string CC = "";
         private List<Movimiento> Movimientos;
 
-        public Cuenta()
+        public Cuenta(string nombre)
         {
             NroCuenta = "";
             Saldo = 0;
             Titular = "";
             Movimientos = new List<Movimiento>();
-            cc = "";
+            CC = "";
         }
 
-        public Cuenta(string nroCuenta, double saldo, string titular, string cc, ArrayList movimientos)
+        public Cuenta(string nroCuenta, double saldo, string titular, string cc)
         {
             NroCuenta = nroCuenta;
+            CC = cc;
             Saldo = saldo;
             Titular = titular;
             Movimientos = new List<Movimiento>();
@@ -29,7 +31,7 @@ namespace MerquiV1
 
         public string getcc()
         {
-            return cc;
+            return CC;
         }
         public double getSaldo()
         {
@@ -69,18 +71,31 @@ namespace MerquiV1
             }
             return false;
         }
-        public bool Transferir(double valor, Cuenta cuenta)
+        public bool Transferir(double valor, String nroCuenta)
         {
+            List<Usuario> lista = Mostrar();
+            Usuario obj;
             if (this.Saldo >= valor)
             {
-                this.Saldo -= valor;
-                return true;
+                foreach (Usuario usuario in lista)
+                {
+                    obj = usuario;
+                    if (obj.NroCuenta == nroCuenta)
+                    {
+                        Saldo-=valor;
+                        obj.cuenta.Depositar(valor);
+                        return true;
+                    }
+
+                }
             }
             return false;
         }
-        public void MostrarMovimientos()
+        public List<Usuario> Mostrar()
         {
+            return UserList.Mostrar();
         }
+
         public void CerrarSesion() { }
     }
 }
