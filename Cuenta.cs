@@ -7,6 +7,7 @@ namespace MerquiV1
         public string NroCuenta = "";
         private double Saldo = 0;
         private string Titular = "";
+        private string cc = "";
         private List<Movimiento> Movimientos;
 
         public Cuenta()
@@ -15,9 +16,10 @@ namespace MerquiV1
             Saldo = 0;
             Titular = "";
             Movimientos = new List<Movimiento>();
+            cc = "";
         }
 
-        public Cuenta(string nroCuenta, double saldo, string titular, ArrayList movimientos)
+        public Cuenta(string nroCuenta, double saldo, string titular, string cc, ArrayList movimientos)
         {
             NroCuenta = nroCuenta;
             Saldo = saldo;
@@ -25,6 +27,10 @@ namespace MerquiV1
             Movimientos = new List<Movimiento>();
         }
 
+        public string getcc()
+        {
+            return cc;
+        }
         public double getSaldo()
         {
             return Saldo;
@@ -72,7 +78,9 @@ namespace MerquiV1
             }
             return false;
         }
-        public void MostrarMovimientos() { }
+        public void MostrarMovimientos()
+        {
+        }
         public void CerrarSesion() { }
     }
 }
