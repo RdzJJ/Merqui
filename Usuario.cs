@@ -27,9 +27,8 @@
             this.CC = cc;
             this.Contrasena = Contrasena;
             this.Saldo = saldo;
-            this.NroCuenta = random.Next(0000000000, 999999999).ToString();
+            this.NroCuenta = random.Next(1000000000, 999999999).ToString();
             this.Celular = celular;
-            this.cuenta = new Cuenta(NroCuenta, cc, nombre, saldo);
         }
 
         public string getCC()

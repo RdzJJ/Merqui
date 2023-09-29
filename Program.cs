@@ -6,9 +6,10 @@
         {
             try
             {
-                Menu menu = new Menu();
-                Cuenta cuenta = new Cuenta();
-                cuenta.MostrarMovimientos();
+                ILoggin ejemplo;
+
+                ejemplo.Log("Holi");
+                
             }
 
             catch (Exception ex)
